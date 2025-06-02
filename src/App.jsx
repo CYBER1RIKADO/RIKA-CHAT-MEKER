@@ -22,13 +22,15 @@ export default function RikaChatMaker() {
         <div className="flex flex-col gap-2 max-h-96 overflow-y-auto mb-4">
           {messages.map((msg, idx) => (
             <div
-              key={idx}
-              className={\`rounded-xl px-3 py-2 max-w-[80%] text-sm font-medium shadow-md \${msg.sender === 'you' ? 'self-end bg-green-500 text-white' : 'self-start bg-white text-black'}\`}
-            >
-              {msg.text}
-            </div>
-          ))}
-        </div>
+  key={idx}
+  className={`rounded-xl px-3 py-2 max-w-[80%] text-sm font-medium shadow-md ${
+    msg.sender === 'you'
+      ? 'self-end bg-green-500 text-white'
+      : 'self-start bg-white text-black'
+  }`}
+>
+  {msg.text}
+</div>
         <div className="flex items-center gap-2">
           <select
             className="text-black rounded-lg px-2 py-1"
