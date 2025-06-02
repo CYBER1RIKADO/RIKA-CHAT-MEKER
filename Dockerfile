@@ -2,7 +2,11 @@ FROM node:18
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json ./
+COPY postcss.config.js ./
+COPY tailwind.config.js ./
+COPY vite.config.js ./
+
 RUN npm install
 
 COPY . .
